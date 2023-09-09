@@ -1,0 +1,47 @@
+{
+    "MaxCount": 1,
+    "MinCount": 1,
+    "ImageId": "ami-0b2b4f610e654d9ac",
+    "InstanceType": "g4dn.2xlarge",
+    "KeyName": "llama-demo",
+    "EbsOptimized": true,
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "Encrypted": false,
+          "DeleteOnTermination": true,
+          "Iops": 3000,
+          "SnapshotId": "snap-0d8c7759ed5039357",
+          "VolumeSize": 1024,
+          "VolumeType": "gp3",
+          "Throughput": 125
+        }
+      }
+    ],
+    "NetworkInterfaces": [
+      {
+        "AssociatePublicIpAddress": true,
+        "DeviceIndex": 0,
+        "Groups": [
+          "sg-08dfc7b7074cdb4f6"
+        ]
+      }
+    ],
+    "TagSpecifications": [
+      {
+        "ResourceType": "instance",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "flyaf-llama-demo"
+          }
+        ]
+      }
+    ],
+    "PrivateDnsNameOptions": {
+      "HostnameType": "ip-name",
+      "EnableResourceNameDnsARecord": true,
+      "EnableResourceNameDnsAAAARecord": false
+    }
+  }
